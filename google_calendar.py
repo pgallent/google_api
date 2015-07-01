@@ -800,7 +800,6 @@ class google_api_calendar(osv.osv):
                                 phonecall_pool.write(cr, uid, crm_phonecall, {'name': event.get('summary', ''),
                                                                           'description': event.get('description', ''),
                                                                           'date': start_utc.strftime('%Y-%m-%d %H:%M:%S'),
-                                                                          'date_deadline': end_utc.strftime('%Y-%m-%d %H:%M:%S'),
                                                                           'duration': duration,
                                                                           'allday': allday,
                                                                           'location': event.get('location', '')}, context={'stop_google_calendar_sync': 'True'})
@@ -808,7 +807,6 @@ class google_api_calendar(osv.osv):
                             phonecall_pool.write(cr, uid, crm_phonecall, {'name': event.get('summary', ''),
                                                                       'description': event.get('description'),
                                                                       'date': start_utc.strftime('%Y-%m-%d %H:%M:%S'),
-                                                                      'date_deadline': end_utc.strftime('%Y-%m-%d %H:%M:%S'),
                                                                       'duration': duration,
                                                                       'allday': allday,
                                                                       'location': event.get('location', '')}, context={'stop_google_calendar_sync': 'True'})
@@ -817,7 +815,6 @@ class google_api_calendar(osv.osv):
                                                       'name': event.get('summary', ''),
                                                       'description': event.get('description'),
                                                       'date': start_utc.strftime('%Y-%m-%d %H:%M:%S'),
-                                                      'date_deadline': end_utc.strftime('%Y-%m-%d %H:%M:%S'),
                                                       'duration': duration,
                                                       'allday': allday,
                                                       'location': event.get('location', ''),
